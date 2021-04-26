@@ -8,8 +8,8 @@ public class test {
     private Crawler crawler = new Crawler();
     @Test
     public void intallPicture() throws Exception {
-        //设置搜索对象
-        crawler.setSearchName("郑恩地");
+        //设置搜索关键字
+        crawler.setSearchName("杨超越");
 
         //设置每页获取图片数
         crawler.setPicNum(60);

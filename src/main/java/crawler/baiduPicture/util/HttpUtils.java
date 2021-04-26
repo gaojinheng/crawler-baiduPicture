@@ -143,13 +143,11 @@ public class HttpUtils {
         HashSet<String> urlSet = new HashSet<String>();
 
 
-        String regex = "(ht|f)tp(s?)\\:\\/\\/[0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*(:(0-9)*)*(\\/?)([a-zA-Z0-9\\-\\.\\?\\,\\'\\/\\\\&%\\+\\$#_=]*)?";
+        String regex = "https\\:\\/\\/(.*?)\\.jpg";
 
         Pattern pat = Pattern.compile(regex);
         Matcher mat = pat.matcher(html);
-        int count = 0;
         while(mat.find()) {
-            count++;
             String group = mat.group();
             urlSet.add(group);
         }
